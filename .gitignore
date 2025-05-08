@@ -1,0 +1,52 @@
+# Binaries
+bin/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Build artifacts
+/build
+/dist
+
+# Coverage reports
+coverage.out
+*.coverprofile
+*.cov
+
+# Logs
+*.log
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# IDEs
+.idea/
+.vscode/
+*.iml
+
+# Dependency management
+vendor/
+
+# Docker
+.env
+docker-compose.override.yml
+
+# Go workspace stuff
+go.work
+go.work.sum
+
+# Editor swap/temp files
+*~
+*.swp
+*.swo
+
+# Ignore all files in the vendor directory
+vendor/
+
+# Ignore all files in the build directory
+build/
