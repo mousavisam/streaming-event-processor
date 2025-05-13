@@ -45,8 +45,15 @@ go.work.sum
 *.swp
 *.swo
 
-# Ignore all files in the vendor directory
-vendor/
+# CI/CD
+*.yaml~
+*.yml~
 
-# Ignore all files in the build directory
-build/
+# Docker build cache
+.docker/
+
+# Linux/macOS temporary
+*.tmp
+*.bak
+
+

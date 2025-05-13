@@ -1,6 +1,7 @@
 package http
 
 import (
+	"fmt"
 	"net/http"
 	"time"
 
@@ -35,7 +36,10 @@ func (h *Handler) handlePostEvent(c *gin.Context) {
 
 	// TODO: validate SchemaVersion, Data structure, etc.
 
+	fmt.Println("Sending event:", event)
+
 	if err := h.producer.SendEvent(c.Request.Context(), &event); err != nil {
+		fmt.Println("Kafka send failed:", err)
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to send event to Kafka"})
 		return
 	}
